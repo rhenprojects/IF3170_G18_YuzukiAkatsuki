@@ -3,12 +3,16 @@ from __future__ import annotations
 from .state import State
 
 PENALTY_WEIGHTS = {
-    "out_of_bounds": 1000,
-    "overlap": 1000,
-    "floating": 1000,
-    "fragile_support": 1000,
-    "overweight": 1000,
+    "out_of_bounds": 1,
+    "overlap": 1,
+    "floating": 1,
+    "fragile_support": 1,
+    "overweight": 1,
 }
+
+# agar value ketika ada pelanggaran selalu lebih buruk dibandingkan tidak ada
+def penalty_scale(state: State) -> int:
+    return sum(p.value for p in state.packages.values()) + 1
 
 def is_within_truck(state: State, pid: str) -> bool:
     pl = state.placements[pid]
@@ -97,22 +101,21 @@ def count_violations(state: State) -> dict[str, int]:
             if overlaps(state, inside[i], inside[j]):
                 overlap +=1
 
+    # supporters tiap paket dihitung sekali, dipakai untuk cek melayang dan fragile
+    sup = {pid: supporters(state, pid) for pid in inside}
+
     # hitung melayang
-    floating = sum(is_floating(state, pid) for pid in inside)
+    floating = sum(
+        state.placements[pid].position[2] != 0 and not sup[pid]
+        for pid in inside
+    )
 
     # paket fragile yang jadi support
-    fragile_support = 0 
-
-    for pid in inside:
-        if not state.packages[pid].is_fragile:
-            continue
-
-        for other in inside:
-            if other == pid:
-                continue
-
-            if pid in supporters(state, other):
-                fragile_support += 1
+    fragile_support = sum(
+        state.packages[s].is_fragile
+        for pid in inside
+        for s in sup[pid]
+    )
 
     # berat melebihi kapasitas
     overweight = max(0, total_weight(state) - state.truck.max_capacity)
@@ -130,5 +133,6 @@ def is_valid(state: State) -> bool:
 
 def objective(state: State) -> float:
     violations = count_violations(state)
-    penalty = sum(PENALTY_WEIGHTS[k] * v for k, v in violations.items())
+    scale = penalty_scale(state)
+    penalty = sum(scale * PENALTY_WEIGHTS[k] * v for k, v in violations.items())
     return total_value(state) - penalty
