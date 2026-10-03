@@ -31,6 +31,25 @@ def apply_move(state: State, move: Move) -> State:
         raise ValueError(f"Move tidak dikenal: {move.kind}")
     return new
 
+def is_noop(state: State, move: Move) -> bool:
+    """True jika move tidak mengubah state (tidak dihitung sebagai neighbor)."""
+    pa = state.placements[move.a]
+
+    if move.kind == "swap":
+        # posisi sama (termasuk sama-sama di luar truk) -> tidak ada perubahan
+        return pa.position == state.placements[move.b].position
+    if move.kind == "move":
+        return pa.position == move.position
+    if move.kind == "rotate":
+        # rotasi paket di luar truk tidak berpengaruh, begitu juga rotasi
+        # yang menghasilkan dimensi sama (contoh sisi w == l saat rotasi z)
+        if not pa.inside:
+            return True
+        package = state.packages[move.a]
+        return (package.oriented_dims(rotate(pa.orientation, move.axis))
+                == package.oriented_dims(pa.orientation))
+    raise ValueError(f"Move tidak dikenal: {move.kind}")
+
 def candidate_positions(state: State, pid: str) -> list[Dim]:
     truck_w, truck_d, truck_h = state.truck.dims
 
@@ -88,6 +107,11 @@ def candidate_positions(state: State, pid: str) -> list[Dim]:
 
 def all_moves(state: State) -> Iterator[Move]:
     """Enumerasi seluruh neighbor (dipakai steepest ascent / sideways / random restart)."""
+    for move in _all_moves_raw(state):
+        if not is_noop(state, move):
+            yield move
+
+def _all_moves_raw(state: State) -> Iterator[Move]:
     ids = list(state.placements)
     # swap
     for i, a in enumerate(ids):
@@ -104,60 +128,45 @@ def all_moves(state: State) -> Iterator[Move]:
         if state.placements[a].inside:
             yield Move("move", a, position=None)  # keluarkan dari truk
 
-def random_move(state: State, rng: random.Random) -> Move:
-    """Ambil satu neighbor secara acak."""
+def random_move(state: State, rng: random.Random, max_tries: int = 100) -> Move:
+    """Ambil satu neighbor secara acak (move yang tidak mengubah state dilewati)."""
     ids = list(state.placements)
 
     if not ids:
         raise ValueError("State tidak memiliki paket.")
 
-    kind = rng.choice(("swap", "move", "rotate"))
+    for _ in range(max_tries):
+        kind = rng.choice(("swap", "move", "rotate"))
 
-    # swap
-    if kind == "swap":
-        if len(ids) < 2:
-            # Kalau hanya ada satu paket, tidak bisa swap.
-            kind = rng.choice(("move", "rotate"))
-        else:
+        # swap
+        if kind == "swap":
+            if len(ids) < 2:
+                continue
             a, b = rng.sample(ids, 2)
-            return Move(
-                kind="swap",
-                a=a,
-                b=b,
-            )
+            move = Move(kind="swap", a=a, b=b)
 
-    # move
-    if kind == "move":
-        a = rng.choice(ids)
+        # move
+        elif kind == "move":
+            a = rng.choice(ids)
+            candidates = candidate_positions(state, a)
 
-        candidates = candidate_positions(state, a)
+            # Paket bisa dikeluarkan dari truck
+            if state.placements[a].inside:
+                candidates.append(None)
 
-        # Paket bisa dikeluarkan dari truck
-        if state.placements[a].inside:
-            candidates.append(None)
+            if not candidates:
+                continue
+            move = Move(kind="move", a=a, position=rng.choice(candidates))
 
-        if not candidates:
-            # Tidak ada kandidat posisi
-            # Fallback ke rotate
-            return Move(
-                kind="rotate",
-                a=a,
-                axis=rng.choice(("x", "y", "z")),
-            )
+        # rotate (hanya berpengaruh untuk paket di dalam truk)
+        else:
+            inside = state.inside_ids()
+            if not inside:
+                continue
+            move = Move(kind="rotate", a=rng.choice(inside),
+                        axis=rng.choice(("x", "y", "z")))
 
-        position = rng.choice(candidates)
+        if not is_noop(state, move):
+            return move
 
-        return Move(
-            kind="move",
-            a=a,
-            position=position,
-        )
-
-    # rotate
-    a = rng.choice(ids)
-
-    return Move(
-        kind="rotate",
-        a=a,
-        axis=rng.choice(("x", "y", "z")),
-    )
+    raise ValueError("Tidak ditemukan neighbor yang mengubah state.")
