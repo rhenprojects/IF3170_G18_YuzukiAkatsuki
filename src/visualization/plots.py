@@ -76,3 +76,15 @@ def plot_history(history: list[float], title: str = "Objective vs Iterasi",
         plt.savefig(save_to, dpi=150)
     plt.show()
 
+def plot_acceptance_probability(probabilities: list[float],
+                                title: str = "Peluang penerimaan e^(ΔE/T) vs Iterasi",
+                                save_to: Path | None = None) -> None:
+    """Plot peluang menerima langkah di tiap iterasi (1.0 untuk langkah yang tidak memperburuk)."""
+    plt.figure(figsize=(8, 4))
+    plt.scatter(range(1, len(probabilities) + 1), probabilities, s=3)
+    plt.ylim(-0.05, 1.05)
+    plt.xlabel("Iterasi"); plt.ylabel("e^(ΔE/T)"); plt.title(title)
+    plt.tight_layout()
+    if save_to:
+        plt.savefig(save_to, dpi=150)
+    plt.show()

@@ -17,6 +17,7 @@ class SimulatedAnnealing(LocalSearch):
         cooling_rate: float = 0.995,
         min_temp: float = 0.001,
         max_iterations: int = 100000,
+        stuck_patience: int = 100,
         seed: int | None = None,
     ):
         super().__init__(seed)
@@ -24,6 +25,7 @@ class SimulatedAnnealing(LocalSearch):
         self.cooling_rate = cooling_rate
         self.min_temp = min_temp
         self.max_iterations = max_iterations
+        self.stuck_patience = stuck_patience
 
     def schedule(self, t: int) -> float:
         return self.initial_temp * (self.cooling_rate ** t)
@@ -36,20 +38,46 @@ class SimulatedAnnealing(LocalSearch):
 
     def _search(self, initial: State) -> tuple[State, int, list[float], dict[str, Any]]:
         current, current_val = initial, objective(initial)
+        best, best_val = current, current_val
         history = [current_val]
         prob_history: list[float] = []  
         stuck_count = 0
+        unchanged_streak = 0
         iterations = 0
-        # TODO:
-        # for t in range(max_iterations):
-        #   T = schedule(t); if T < min_temp: break
-        #   neighbor = apply_move(current, random_move(current, self.rng))
-        #   ΔE = objective(neighbor) - current_val
-        #   p = acceptance_probability(ΔE, T); prob_history.append(p)
-        #   if ΔE > 0 or rng.random() < p: terima neighbor
-        #   kondisi 'stuck'
-        raise NotImplementedError
-        return current, iterations, history, {
+
+        for t in range(self.max_iterations):
+            temp = self.schedule(t)
+            if temp < self.min_temp:
+                break
+
+            try:
+                move = random_move(current, self.rng)
+            except ValueError:
+                break
+
+            neighbor = apply_move(current, move)
+            neighbor_val = objective(neighbor)
+            delta_e = neighbor_val - current_val
+            p = self.acceptance_probability(delta_e, temp)
+            prob_history.append(p)
+            iterations += 1
+
+            previous_val = current_val
+            if self.rng.random() < p:
+                current, current_val = neighbor, neighbor_val
+                if current_val > best_val:
+                    best, best_val = current, current_val
+
+            if current_val == previous_val:
+                unchanged_streak += 1
+                if unchanged_streak == self.stuck_patience:
+                    stuck_count += 1
+            else:
+                unchanged_streak = 0
+
+            history.append(current_val)
+
+        return best, iterations, history, {
             "acceptance_probability": prob_history,
             "stuck_count": stuck_count,
         }
