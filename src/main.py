@@ -5,7 +5,7 @@ import argparse
 from algorithms import ALGORITHMS
 from core.io_utils import load_problem
 from experiment import run_repeated, summarize
-from visualization.plots import plot_history
+from visualization.plots import plot_acceptance_probability, plot_history, plot_state
 
 
 def parse_args() -> argparse.Namespace:
@@ -43,8 +43,12 @@ def main() -> None:
     if args.no_plot:
         return
     for r in results:
+        plot_state(r.initial_state, "State awal")
+        plot_state(r.final_state, "State akhir")
         extra = {"rata-rata populasi": r.extra["avg_history"]} if "avg_history" in r.extra else None
         plot_history(r.history, f"{r.algorithm}: objective vs iterasi", extra)
+        if "acceptance_probability" in r.extra:
+            plot_acceptance_probability(r.extra["acceptance_probability"])
 
 
 if __name__ == "__main__":
