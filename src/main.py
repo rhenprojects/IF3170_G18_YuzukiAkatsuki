@@ -6,8 +6,9 @@ from pathlib import Path
 from algorithms import ALGORITHMS
 from algorithms.base import SearchResult
 from core.io_utils import load_problem
+from core.objective import OBJECTIVE_MODES, set_objective_mode
 from experiment import run_ga_experiment, run_repeated, summarize
-from visualization.plots import plot_acceptance_probability, plot_history, plot_state
+from visualization.plots import (plot_acceptance_probability, plot_history, plot_state)
 
 
 def parse_args() -> argparse.Namespace:
@@ -21,6 +22,9 @@ def parse_args() -> argparse.Namespace:
                    help="Tampilkan plot secara interaktif (plot selalu disimpan ke folder output)")
     p.add_argument("--ga-experiment", action="store_true",
                    help="Jalankan seluruh skenario eksperimen GA")
+    p.add_argument("--objective", choices=OBJECTIVE_MODES, default="value",
+                   help="Fungsi objektif: value = total value (default), "
+                        "density = total value/berat tiap paket")
     # parameter algoritma
     p.add_argument("--max-sideways", type=int)
     p.add_argument("--max-restart", type=int)
@@ -41,7 +45,7 @@ def algo_params(args: argparse.Namespace) -> dict:
     }
     return {k: v for k, v in mapping.get(args.algo, {}).items() if v is not None}
 
-def plot_result(r: SearchResult, json_path: Path, show: bool) -> None:
+def plot_result(r: SearchResult, json_path: Path, show: bool, gif: bool = False) -> None:
     """Simpan (dan opsional tampilkan) visualisasi satu run di samping file JSON hasilnya."""
     base = json_path.with_suffix("")
     title = json_path.stem
@@ -66,6 +70,7 @@ def plot_result(r: SearchResult, json_path: Path, show: bool) -> None:
 
 def main() -> None:
     args = parse_args()
+    set_objective_mode(args.objective)
     truck, packages = load_problem(args.input)
 
     if args.ga_experiment:

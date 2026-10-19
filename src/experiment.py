@@ -8,7 +8,7 @@ from algorithms.base import SearchResult
 from algorithms.genetic import GeneticAlgorithm
 from core.io_utils import save_result
 from core.models import Package, Truck
-from core.objective import is_valid
+from core.objective import is_valid, total_value
 from core.state import State
 
 N_RUNS = 3
@@ -55,7 +55,8 @@ def run_ga_experiment(truck: Truck, packages: dict[str, Package],
 def summarize(results: list[SearchResult]) -> None:
     for i, r in enumerate(results, 1):
         print(f"[{r.algorithm} #{i}] init={r.initial_objective:.2f} "
-              f"final={r.final_objective:.2f} valid={is_valid(r.final_state)} "
+              f"final={r.final_objective:.2f} value={total_value(r.final_state)} "
+              f"valid={is_valid(r.final_state)} objective={r.objective_mode} "
               f"iter={r.iterations} time={r.duration_s:.3f}s")
         e = r.extra
         if "iterations_per_restart" in e:

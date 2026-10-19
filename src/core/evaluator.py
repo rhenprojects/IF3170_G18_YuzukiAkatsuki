@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from .models import Dim, rotate
 from .neighbors import Move
-from .objective import PENALTY_WEIGHTS, count_violations, penalty_scale, supporters
+from .objective import (_ROUND_DIGITS, PENALTY_WEIGHTS, count_violations, package_score,
+                        penalty_scale, supporters, total_score)
 from .state import State
 
 Box = tuple[Dim, Dim]
@@ -38,7 +39,7 @@ class NeighborEvaluator:
         self.boxes: dict[str, Box] = {pid: state.box(pid) for pid in self.inside}
         self.sup_count = {pid: len(supporters(state, pid)) for pid in self.inside}
         self.violations = count_violations(state)
-        self.value = sum(state.packages[pid].value for pid in self.inside)
+        self.value = total_score(state)
         self.weight = sum(state.packages[pid].weight for pid in self.inside)
 
     def _new_boxes(self, move: Move) -> dict[str, Box | None]:
@@ -75,10 +76,10 @@ class NeighborEvaluator:
             pkg = pkgs[c]
             frag_c = pkg.is_fragile
             if ob is not None:
-                d_value -= pkg.value; d_weight -= pkg.weight
+                d_value -= package_score(pkg); d_weight -= pkg.weight
                 d["out_of_bounds"] -= _out_of_bounds(ob, truck.dims)
             if nb is not None:
-                d_value += pkg.value; d_weight += pkg.weight
+                d_value += package_score(pkg); d_weight += pkg.weight
                 d["out_of_bounds"] += _out_of_bounds(nb, truck.dims)
 
             # pasangan dengan paket yang tidak berubah
@@ -138,4 +139,4 @@ class NeighborEvaluator:
 
         penalty = sum(self.scale * PENALTY_WEIGHTS[k] * (self.violations[k] + d[k])
                       for k in self.violations)
-        return self.value + d_value - penalty
+        return round(self.value + d_value - penalty, _ROUND_DIGITS)
