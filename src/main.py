@@ -30,6 +30,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--max-restart", type=int)
     p.add_argument("--max-iterations", type=int)
     p.add_argument("--population", type=int)
+    p.add_argument("--stuck-patience", type=int)
+    p.add_argument("--initial-temp", type=float)
+    p.add_argument("--min-temp", type=float)
     args = p.parse_args()
     if not args.algo and not args.ga_experiment:
         p.error("pilih --algo atau --ga-experiment")
@@ -40,7 +43,8 @@ def algo_params(args: argparse.Namespace) -> dict:
         "sideways": {"max_sideways": args.max_sideways},
         "random_restart": {"max_restart": args.max_restart},
         "stochastic": {"max_iterations": args.max_iterations},
-        "sa": {"max_iterations": args.max_iterations},
+        "sa": {"max_iterations": args.max_iterations, "stuck_patience": args.stuck_patience,
+               "initial_temp": args.initial_temp, "min_temp": args.min_temp},
         "ga": {"population_size": args.population, "max_iterations": args.max_iterations},
     }
     return {k: v for k, v in mapping.get(args.algo, {}).items() if v is not None}

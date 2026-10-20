@@ -112,7 +112,7 @@ def _add_rotation_controls(fig, ax) -> None:
     fig._rotation_widgets = (s_azim, s_elev, b_spin, timer)
 
 
-def plot_state(state: State, title: str = "", save_to: Path | None = None, show: bool = True) -> None:
+def plot_state(state: State, title: str = "", save_to: Path | None = None, show: bool = False) -> None:
     fig = plt.figure(figsize=(11, 5.5))
     ax = fig.add_subplot(121, projection="3d")
     _draw_state(ax, state, title)
@@ -133,7 +133,7 @@ def plot_state(state: State, title: str = "", save_to: Path | None = None, show:
 def plot_history(history: list[float], title: str = "Objective vs Iterasi",
                  extra_series: dict[str, list[float]] | None = None,
                  save_to: Path | None = None, label: str = "objective",
-                 show: bool = True) -> None:
+                 show: bool = False) -> None:
     """Plot objective terhadap iterasi. `extra_series` untuk mis. rata-rata populasi GA."""
     plt.figure(figsize=(8, 4))
     plt.plot(history, label=label)
@@ -147,7 +147,7 @@ def plot_history(history: list[float], title: str = "Objective vs Iterasi",
 
 def plot_acceptance_probability(probabilities: list[float],
                                 title: str = "Peluang penerimaan e^(ΔE/T) vs Iterasi",
-                                save_to: Path | None = None, show: bool = True) -> None:
+                                save_to: Path | None = None, show: bool = False) -> None:
     """Plot peluang menerima langkah di tiap iterasi (1.0 untuk langkah yang tidak memperburuk)."""
     plt.figure(figsize=(8, 4))
     plt.scatter(range(1, len(probabilities) + 1), probabilities, s=3)
