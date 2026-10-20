@@ -78,6 +78,17 @@ class State:
             state.placements[pid] = Placement(position=position, orientation=orientation)
         return state
     
+    @classmethod
+    def from_dict(cls, truck: Truck, packages: dict[str, Package], data: dict) -> "State":
+        """Kebalikan to_dict: bangun ulang state dari hasil run yang disimpan."""
+        state = cls(truck, packages)
+        state.placements = {
+            pid: Placement(position=tuple(p["position"]) if p["position"] is not None else None,
+                           orientation=tuple(p["orientation"]))
+            for pid, p in data.items()
+        }
+        return state
+
     def to_dict(self) -> dict:
         return {
             pid: {
