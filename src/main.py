@@ -8,7 +8,7 @@ from algorithms.base import SearchResult
 from core.io_utils import load_problem
 from core.objective import OBJECTIVE_MODES, set_objective_mode
 from experiment import run_ga_experiment, run_repeated, summarize
-from visualization.plots import (plot_acceptance_probability, plot_history, plot_state)
+from visualization.plots import plot_acceptance_probability, plot_history, plot_state
 
 
 def parse_args() -> argparse.Namespace:
@@ -45,7 +45,7 @@ def algo_params(args: argparse.Namespace) -> dict:
     }
     return {k: v for k, v in mapping.get(args.algo, {}).items() if v is not None}
 
-def plot_result(r: SearchResult, json_path: Path, show: bool, gif: bool = False) -> None:
+def plot_result(r: SearchResult, json_path: Path, show: bool) -> None:
     """Simpan (dan opsional tampilkan) visualisasi satu run di samping file JSON hasilnya."""
     base = json_path.with_suffix("")
     title = json_path.stem
