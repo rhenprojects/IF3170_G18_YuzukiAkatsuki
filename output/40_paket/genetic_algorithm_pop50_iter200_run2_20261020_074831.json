@@ -1,0 +1,1681 @@
+{
+  "algorithm": "genetic_algorithm",
+  "objective_mode": "value",
+  "final_total_value": 1374,
+  "initial_objective": -62872,
+  "final_objective": 1374,
+  "duration_s": 3.6752415999944787,
+  "iterations": 200,
+  "history": [
+    -36161,
+    -33530,
+    -20373,
+    -20373,
+    -20373,
+    -17786,
+    -17786,
+    -17743,
+    -17743,
+    -14980,
+    -14980,
+    -14980,
+    -14980,
+    -9987,
+    -9987,
+    -7295,
+    -4738,
+    -4738,
+    -4586,
+    -2029,
+    -2029,
+    -2029,
+    -2029,
+    -2029,
+    -1972,
+    -1923,
+    -1923,
+    -1853,
+    -1853,
+    -1853,
+    -1853,
+    637,
+    637,
+    724,
+    724,
+    724,
+    724,
+    724,
+    724,
+    724,
+    724,
+    724,
+    785,
+    787,
+    787,
+    787,
+    787,
+    888,
+    888,
+    888,
+    888,
+    888,
+    888,
+    888,
+    888,
+    894,
+    894,
+    894,
+    894,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    928,
+    985,
+    1028,
+    1028,
+    1028,
+    1028,
+    1028,
+    1028,
+    1028,
+    1028,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1049,
+    1065,
+    1065,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1149,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1190,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1249,
+    1295,
+    1295,
+    1295,
+    1295,
+    1295,
+    1295,
+    1295,
+    1295,
+    1295,
+    1295,
+    1363,
+    1363,
+    1363,
+    1363,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374,
+    1374
+  ],
+  "extra": {
+    "population_size": 50,
+    "mutation_rate": 0.1,
+    "elitism": 1,
+    "initial_best_objective": -36161,
+    "avg_history": [
+      -90894.54,
+      -95116.76,
+      -83315.9,
+      -80423.24,
+      -70987.0,
+      -63679.88,
+      -54294.74,
+      -47659.18,
+      -43280.9,
+      -38898.04,
+      -37384.16,
+      -35966.78,
+      -30713.46,
+      -26869.04,
+      -23964.02,
+      -23086.64,
+      -20197.08,
+      -18302.62,
+      -16178.32,
+      -14534.54,
+      -12319.18,
+      -11475.32,
+      -9623.82,
+      -8992.36,
+      -6522.86,
+      -5268.32,
+      -3741.7,
+      -2949.34,
+      -2623.56,
+      -2401.54,
+      -2135.68,
+      -2272.58,
+      -2323.32,
+      -1801.58,
+      -1432.3,
+      -1164.3,
+      -883.82,
+      -616.66,
+      -14.74,
+      403.9,
+      351.92,
+      349.02,
+      205.14,
+      380.7,
+      327.42,
+      537.52,
+      529.9,
+      367.24,
+      462.92,
+      538.94,
+      542.58,
+      293.44,
+      294.78,
+      -65.82,
+      -334.64,
+      350.92,
+      515.12,
+      494.42,
+      481.16,
+      531.28,
+      650.84,
+      448.48,
+      454.66,
+      411.66,
+      576.48,
+      402.64,
+      625.6,
+      370.3,
+      82.84,
+      530.68,
+      376.5,
+      588.3,
+      339.32,
+      389.28,
+      709.4,
+      823.56,
+      677.16,
+      745.44,
+      738.04,
+      756.06,
+      880.52,
+      789.36,
+      784.3,
+      634.5,
+      690.98,
+      755.04,
+      715.56,
+      823.42,
+      878.66,
+      779.34,
+      654.86,
+      928.18,
+      824.5,
+      718.36,
+      591.24,
+      532.92,
+      654.18,
+      588.88,
+      627.62,
+      839.76,
+      827.74,
+      779.66,
+      854.88,
+      746.08,
+      600.74,
+      396.72,
+      389.4,
+      613.84,
+      461.82,
+      264.62,
+      627.54,
+      736.6,
+      1004.5,
+      610.92,
+      243.54,
+      512.26,
+      458.08,
+      617.36,
+      741.48,
+      841.58,
+      529.7,
+      468.36,
+      583.62,
+      98.08,
+      84.04,
+      389.36,
+      435.42,
+      352.66,
+      147.18,
+      623.04,
+      680.06,
+      617.24,
+      522.68,
+      566.28,
+      785.26,
+      958.54,
+      910.46,
+      822.84,
+      1088.78,
+      743.98,
+      748.18,
+      638.52,
+      693.58,
+      673.86,
+      982.36,
+      886.9,
+      901.3,
+      1061.56,
+      683.76,
+      959.82,
+      943.42,
+      726.58,
+      715.86,
+      554.1,
+      453.38,
+      627.18,
+      804.82,
+      916.04,
+      1040.22,
+      1038.06,
+      883.0,
+      678.88,
+      570.72,
+      685.84,
+      1004.7,
+      900.84,
+      1077.16,
+      1014.82,
+      1002.54,
+      697.38,
+      854.94,
+      964.0,
+      645.14,
+      909.82,
+      961.4,
+      699.74,
+      968.48,
+      971.66,
+      910.92,
+      965.86,
+      701.92,
+      808.06,
+      914.1,
+      969.74,
+      1041.92,
+      1218.16,
+      916.18,
+      859.2,
+      899.0,
+      848.48,
+      1128.22,
+      1000.74,
+      753.44,
+      974.2,
+      965.94,
+      958.26,
+      1063.98,
+      1001.88,
+      1160.8,
+      1106.46,
+      623.1
+    ]
+  },
+  "initial_state": {
+    "P01": {
+      "inside": true,
+      "position": [
+        5,
+        5,
+        2
+      ],
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        5,
+        3
+      ]
+    },
+    "P02": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        5,
+        3
+      ]
+    },
+    "P03": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        4,
+        1
+      ]
+    },
+    "P04": {
+      "inside": true,
+      "position": [
+        5,
+        5,
+        0
+      ],
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        5
+      ]
+    },
+    "P05": {
+      "inside": true,
+      "position": [
+        8,
+        11,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        2,
+        5
+      ]
+    },
+    "P06": {
+      "inside": true,
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        4
+      ]
+    },
+    "P07": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        2,
+        1
+      ]
+    },
+    "P08": {
+      "inside": true,
+      "position": [
+        4,
+        5,
+        4
+      ],
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        3,
+        1
+      ]
+    },
+    "P09": {
+      "inside": true,
+      "position": [
+        0,
+        5,
+        2
+      ],
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        3,
+        3,
+        1
+      ]
+    },
+    "P10": {
+      "inside": true,
+      "position": [
+        4,
+        11,
+        0
+      ],
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        5,
+        3,
+        4
+      ]
+    },
+    "P11": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        2
+      ]
+    },
+    "P12": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        2
+      ]
+    },
+    "P13": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        3,
+        1
+      ]
+    },
+    "P14": {
+      "inside": true,
+      "position": [
+        7,
+        5,
+        3
+      ],
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        3,
+        2
+      ]
+    },
+    "P15": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        3,
+        5,
+        1
+      ]
+    },
+    "P16": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        5
+      ]
+    },
+    "P17": {
+      "inside": true,
+      "position": [
+        7,
+        16,
+        2
+      ],
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        3,
+        4,
+        2
+      ]
+    },
+    "P18": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        3,
+        4
+      ]
+    },
+    "P19": {
+      "inside": true,
+      "position": [
+        8,
+        14,
+        1
+      ],
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        2,
+        3
+      ]
+    },
+    "P20": {
+      "inside": true,
+      "position": [
+        2,
+        5,
+        4
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        3,
+        1
+      ]
+    },
+    "P21": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        5,
+        4
+      ]
+    },
+    "P22": {
+      "inside": true,
+      "position": [
+        8,
+        16,
+        1
+      ],
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        4,
+        4
+      ]
+    },
+    "P23": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        1
+      ]
+    },
+    "P24": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        2
+      ]
+    },
+    "P25": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        4
+      ]
+    },
+    "P26": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        3,
+        2
+      ]
+    },
+    "P27": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        1,
+        2,
+        2
+      ]
+    },
+    "P28": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        5,
+        4,
+        2
+      ]
+    },
+    "P29": {
+      "inside": true,
+      "position": [
+        0,
+        8,
+        2
+      ],
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        3,
+        3
+      ]
+    },
+    "P30": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        2,
+        1,
+        2
+      ]
+    },
+    "P31": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        5,
+        1,
+        2
+      ]
+    },
+    "P32": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        2,
+        1,
+        2
+      ]
+    },
+    "P33": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        3,
+        5
+      ]
+    },
+    "P34": {
+      "inside": true,
+      "position": [
+        0,
+        1,
+        2
+      ],
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        5,
+        1
+      ]
+    },
+    "P35": {
+      "inside": true,
+      "position": [
+        0,
+        2,
+        0
+      ],
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        4,
+        1
+      ]
+    },
+    "P36": {
+      "inside": true,
+      "position": [
+        0,
+        11,
+        1
+      ],
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        1,
+        4,
+        4
+      ]
+    },
+    "P37": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        2,
+        3,
+        2
+      ]
+    },
+    "P38": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        5,
+        4,
+        3
+      ]
+    },
+    "P39": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        3,
+        2,
+        5
+      ]
+    },
+    "P40": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        1,
+        5
+      ]
+    }
+  },
+  "final_state": {
+    "P01": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        5,
+        2,
+        3
+      ]
+    },
+    "P02": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        3,
+        5
+      ]
+    },
+    "P03": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        1,
+        4
+      ]
+    },
+    "P04": {
+      "inside": true,
+      "position": [
+        3,
+        5,
+        0
+      ],
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        5
+      ]
+    },
+    "P05": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        5,
+        2,
+        2
+      ]
+    },
+    "P06": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        2
+      ]
+    },
+    "P07": {
+      "inside": true,
+      "position": [
+        5,
+        17,
+        0
+      ],
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        1,
+        2,
+        2
+      ]
+    },
+    "P08": {
+      "inside": true,
+      "position": [
+        7,
+        11,
+        4
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        3,
+        4,
+        1
+      ]
+    },
+    "P09": {
+      "inside": true,
+      "position": [
+        7,
+        15,
+        4
+      ],
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        3,
+        3,
+        1
+      ]
+    },
+    "P10": {
+      "inside": true,
+      "position": [
+        3,
+        8,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        3,
+        4,
+        5
+      ]
+    },
+    "P11": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        4
+      ]
+    },
+    "P12": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        4
+      ]
+    },
+    "P13": {
+      "inside": true,
+      "position": [
+        3,
+        7,
+        0
+      ],
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        1,
+        3
+      ]
+    },
+    "P14": {
+      "inside": true,
+      "position": [
+        3,
+        16,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        3,
+        3
+      ]
+    },
+    "P15": {
+      "inside": true,
+      "position": [
+        8,
+        3,
+        0
+      ],
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        1,
+        3,
+        5
+      ]
+    },
+    "P16": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        5,
+        4,
+        4
+      ]
+    },
+    "P17": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        3
+      ]
+    },
+    "P18": {
+      "inside": true,
+      "position": [
+        7,
+        8,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        3,
+        4
+      ]
+    },
+    "P19": {
+      "inside": true,
+      "position": [
+        0,
+        8,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        1,
+        3
+      ]
+    },
+    "P20": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        1,
+        4
+      ]
+    },
+    "P21": {
+      "inside": true,
+      "position": [
+        3,
+        0,
+        0
+      ],
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        5,
+        3
+      ]
+    },
+    "P22": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        2,
+        4
+      ]
+    },
+    "P23": {
+      "inside": true,
+      "position": [
+        7,
+        0,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        4,
+        4
+      ]
+    },
+    "P24": {
+      "inside": true,
+      "position": [
+        8,
+        15,
+        0
+      ],
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        4,
+        4
+      ]
+    },
+    "P25": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        4,
+        4,
+        2
+      ]
+    },
+    "P26": {
+      "inside": true,
+      "position": [
+        0,
+        11,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        2,
+        3,
+        2
+      ]
+    },
+    "P27": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        2,
+        1
+      ],
+      "oriented_dims": [
+        2,
+        2,
+        1
+      ]
+    },
+    "P28": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        5,
+        4
+      ]
+    },
+    "P29": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        2,
+        3
+      ]
+    },
+    "P30": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        2,
+        1
+      ]
+    },
+    "P31": {
+      "inside": true,
+      "position": [
+        3,
+        13,
+        0
+      ],
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        2,
+        5
+      ]
+    },
+    "P32": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        2,
+        2
+      ]
+    },
+    "P33": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        3,
+        4,
+        5
+      ]
+    },
+    "P34": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        5,
+        1
+      ]
+    },
+    "P35": {
+      "inside": true,
+      "position": [
+        0,
+        5,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        0
+      ],
+      "oriented_dims": [
+        1,
+        3,
+        4
+      ]
+    },
+    "P36": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        1,
+        4,
+        4
+      ]
+    },
+    "P37": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        0,
+        1,
+        2
+      ],
+      "oriented_dims": [
+        2,
+        2,
+        3
+      ]
+    },
+    "P38": {
+      "inside": true,
+      "position": [
+        5,
+        12,
+        0
+      ],
+      "orientation": [
+        1,
+        0,
+        2
+      ],
+      "oriented_dims": [
+        3,
+        5,
+        4
+      ]
+    },
+    "P39": {
+      "inside": true,
+      "position": [
+        0,
+        14,
+        0
+      ],
+      "orientation": [
+        2,
+        0,
+        1
+      ],
+      "oriented_dims": [
+        3,
+        2,
+        5
+      ]
+    },
+    "P40": {
+      "inside": false,
+      "position": null,
+      "orientation": [
+        1,
+        2,
+        0
+      ],
+      "oriented_dims": [
+        4,
+        1,
+        5
+      ]
+    }
+  }
+}
