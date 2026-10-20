@@ -62,7 +62,7 @@ def summarize(results: list[SearchResult]) -> None:
         if "iterations_per_restart" in e:
             print(f"    restart={e['restarts']} iterasi per restart={e['iterations_per_restart']}")
         if "stuck_count" in e:
-            print(f"    frekuensi stuck di local optima={e['stuck_count']}")
+            print(f"    frekuensi stuck={e['stuck_count']}")
         if "population_size" in e:
             print(f"    populasi={e['population_size']} iterasi={r.iterations}")
         if "accepted_moves" in e:

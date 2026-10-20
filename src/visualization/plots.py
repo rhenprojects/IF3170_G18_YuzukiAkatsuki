@@ -19,7 +19,7 @@ def _cuboid_faces(pos, dims):
             [v[1], v[2], v[6], v[5]], [v[0], v[3], v[7], v[4]]]
 
 
-def plot_state(state: State, title: str = "", save_to: Path | None = None) -> None:
+def plot_state(state: State, title: str = "", save_to: Path | None = None, show: bool = False) -> None:
     fig = plt.figure(figsize=(11, 5.5))
     ax = fig.add_subplot(121, projection="3d")
     W, L, H = state.truck.dims
@@ -60,25 +60,29 @@ def plot_state(state: State, title: str = "", save_to: Path | None = None) -> No
     fig.tight_layout()
     if save_to:
         fig.savefig(save_to, dpi=150, bbox_inches="tight")
-    plt.show()
+    if show:
+        plt.show()
+    plt.close(fig)
 
 def plot_history(history: list[float], title: str = "Objective vs Iterasi",
                  extra_series: dict[str, list[float]] | None = None,
-                 save_to: Path | None = None) -> None:
+                 save_to: Path | None = None, label: str = "objective", show: bool = False) -> None:
     """Plot objective terhadap iterasi. `extra_series` untuk mis. rata-rata populasi GA."""
     plt.figure(figsize=(8, 4))
-    plt.plot(history, label="objective")
+    plt.plot(history, label=label)
     for label, series in (extra_series or {}).items():
         plt.plot(series, label=label)
     plt.xlabel("Iterasi"); plt.ylabel("Objective"); plt.title(title); plt.legend()
     plt.tight_layout()
     if save_to:
         plt.savefig(save_to, dpi=150)
-    plt.show()
+    if show:
+        plt.show()
+    plt.close()
 
 def plot_acceptance_probability(probabilities: list[float],
                                 title: str = "Peluang penerimaan e^(ΔE/T) vs Iterasi",
-                                save_to: Path | None = None) -> None:
+                                save_to: Path | None = None, show: bool = False) -> None:
     """Plot peluang menerima langkah di tiap iterasi (1.0 untuk langkah yang tidak memperburuk)."""
     plt.figure(figsize=(8, 4))
     plt.scatter(range(1, len(probabilities) + 1), probabilities, s=3)
@@ -87,4 +91,6 @@ def plot_acceptance_probability(probabilities: list[float],
     plt.tight_layout()
     if save_to:
         plt.savefig(save_to, dpi=150)
-    plt.show()
+    if show:
+        plt.show()
+    plt.close()
