@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import Any
 
+from core.evaluator import NeighborEvaluator
 from core.neighbors import apply_move, random_move
 from core.objective import objective
 from core.state import State
@@ -38,6 +39,7 @@ class SimulatedAnnealing(LocalSearch):
 
     def _search(self, initial: State) -> tuple[State, int, list[float], dict[str, Any]]:
         current, current_val = initial, objective(initial)
+        evaluator = NeighborEvaluator(current)
         best, best_val = current, current_val
         history = [current_val]
         prob_history: list[float] = []  
@@ -55,8 +57,7 @@ class SimulatedAnnealing(LocalSearch):
             except ValueError:
                 break
 
-            neighbor = apply_move(current, move)
-            neighbor_val = objective(neighbor)
+            neighbor_val = evaluator.evaluate(move)
             delta_e = neighbor_val - current_val
             p = self.acceptance_probability(delta_e, temp)
             prob_history.append(p)
@@ -64,7 +65,8 @@ class SimulatedAnnealing(LocalSearch):
 
             previous_val = current_val
             if self.rng.random() < p:
-                current, current_val = neighbor, neighbor_val
+                current, current_val = apply_move(current, move), neighbor_val
+                evaluator = NeighborEvaluator(current)
                 if current_val > best_val:
                     best, best_val = current, current_val
 

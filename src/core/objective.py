@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from .models import Package
 from .state import State
 
 PENALTY_WEIGHTS = {
@@ -10,9 +11,32 @@ PENALTY_WEIGHTS = {
     "overweight": 1,
 }
 
+OBJECTIVE_MODES = ("value", "density")
+_objective_mode = "value"
+
+_ROUND_DIGITS = 6
+
+
+def set_objective_mode(mode: str) -> None:
+    global _objective_mode
+    if mode not in OBJECTIVE_MODES:
+        raise ValueError(f"Mode objective tidak dikenal: {mode}")
+    _objective_mode = mode
+
+
+def get_objective_mode() -> str:
+    return _objective_mode
+
+
+def package_score(package: Package) -> float:
+    if _objective_mode == "density":
+        return package.value / package.weight if package.weight > 0 else package.value
+    return package.value
+
+
 # agar value ketika ada pelanggaran selalu lebih buruk dibandingkan tidak ada
-def penalty_scale(state: State) -> int:
-    return sum(p.value for p in state.packages.values()) + 1
+def penalty_scale(state: State) -> float:
+    return sum(package_score(p) for p in state.packages.values()) + 1
 
 def is_within_truck(state: State, pid: str) -> bool:
     pl = state.placements[pid]
@@ -84,7 +108,11 @@ def total_weight(state: State) -> int:
 
 
 def total_value(state: State) -> int:
-    return sum(state.packages[pid].value for pid in state.inside_ids())        
+    return sum(state.packages[pid].value for pid in state.inside_ids())
+
+
+def total_score(state: State) -> float:
+    return sum(package_score(state.packages[pid]) for pid in state.inside_ids())
 
 
 def count_violations(state: State) -> dict[str, int]:
@@ -135,4 +163,4 @@ def objective(state: State) -> float:
     violations = count_violations(state)
     scale = penalty_scale(state)
     penalty = sum(scale * PENALTY_WEIGHTS[k] * v for k, v in violations.items())
-    return total_value(state) - penalty
+    return round(total_score(state) - penalty, _ROUND_DIGITS)
