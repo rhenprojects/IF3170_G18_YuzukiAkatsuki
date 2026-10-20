@@ -1,6 +1,9 @@
 # IF3170_G18_YuzukiAkatsuki
 
-Tugas Besar 1 IF3170 Inteligensi Artifisial 2026/2027 (Kelompok 18).
+Repositori ini berisi Tugas Besar 1 IF3170 Inteligensi Artifisial 2026/2027 (G18_YuzukiAkatsuki)
+
+<img width="1920" height="1080" alt="Add a heading (2)" src="https://github.com/user-attachments/assets/2731a4ac-943f-4d90-b28c-a444a937bb33" />
+
 
 Program ini menyelesaikan persoalan **Mejiro Express**: memilih dan menata paket (kubus/balok) di dalam sebuah peti kemas truk agar **total value paket yang diangkut maksimum**, tanpa melanggar batasan fisik (tidak menembus dinding, tidak saling tumpang tindih, tidak melayang, paket fragile tidak boleh menjadi penyangga, dan total berat tidak melebihi kapasitas). Persoalan diselesaikan dengan algoritma *local search* dalam Python:
 
@@ -108,3 +111,5 @@ Setiap run menyimpan satu berkas JSON (state awal dan akhir, nilai objective, ri
 | 13524012 | Tengku Naufal Saqib | Hill Climbing |
 | 13524039 | Rhenaldy Cahyadi Putra | Simulated Annealing |
 | 13524113 | Fauzan Mohamad Abdul Ghani | Genetic Algorithm |
+
+Made with 💚 by YuzukiAkatsuki
