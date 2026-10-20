@@ -1,0 +1,1212 @@
+{
+  "truck": {
+    "dimensions": {
+      "w": 10,
+      "l": 20,
+      "h": 5
+    },
+    "max_capacity": 1000
+  },
+  "packages": [
+    {
+      "id": "P001",
+      "dimensions": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "value": 56,
+      "weight": 26,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P002",
+      "dimensions": {
+        "w": 1,
+        "l": 2,
+        "h": 3
+      },
+      "value": 17,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P003",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 1
+      },
+      "value": 61,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P004",
+      "dimensions": {
+        "w": 1,
+        "l": 3,
+        "h": 3
+      },
+      "value": 89,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P005",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 3
+      },
+      "value": 63,
+      "weight": 11,
+      "is_fragile": true,
+      "eta": 3
+    },
+    {
+      "id": "P006",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "value": 49,
+      "weight": 40,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P007",
+      "dimensions": {
+        "w": 4,
+        "l": 5,
+        "h": 3
+      },
+      "value": 56,
+      "weight": 3,
+      "is_fragile": true,
+      "eta": 7
+    },
+    {
+      "id": "P008",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 3
+      },
+      "value": 37,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P009",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 1
+      },
+      "value": 100,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P010",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 1
+      },
+      "value": 14,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P011",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 1
+      },
+      "value": 67,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P012",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 3
+      },
+      "value": 38,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P013",
+      "dimensions": {
+        "w": 4,
+        "l": 1,
+        "h": 2
+      },
+      "value": 23,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P014",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 3
+      },
+      "value": 39,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P015",
+      "dimensions": {
+        "w": 1,
+        "l": 4,
+        "h": 1
+      },
+      "value": 50,
+      "weight": 12,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P016",
+      "dimensions": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "value": 22,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P017",
+      "dimensions": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "value": 29,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P018",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 1
+      },
+      "value": 101,
+      "weight": 18,
+      "is_fragile": true,
+      "eta": 3
+    },
+    {
+      "id": "P019",
+      "dimensions": {
+        "w": 3,
+        "l": 5,
+        "h": 1
+      },
+      "value": 106,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P020",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "value": 78,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P021",
+      "dimensions": {
+        "w": 4,
+        "l": 1,
+        "h": 3
+      },
+      "value": 120,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P022",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 3
+      },
+      "value": 18,
+      "weight": 31,
+      "is_fragile": true,
+      "eta": 4
+    },
+    {
+      "id": "P023",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 3
+      },
+      "value": 18,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P024",
+      "dimensions": {
+        "w": 2,
+        "l": 3,
+        "h": 1
+      },
+      "value": 22,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P025",
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "value": 38,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P026",
+      "dimensions": {
+        "w": 1,
+        "l": 4,
+        "h": 2
+      },
+      "value": 101,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P027",
+      "dimensions": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "value": 19,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P028",
+      "dimensions": {
+        "w": 1,
+        "l": 3,
+        "h": 1
+      },
+      "value": 15,
+      "weight": 40,
+      "is_fragile": true,
+      "eta": 2
+    },
+    {
+      "id": "P029",
+      "dimensions": {
+        "w": 4,
+        "l": 5,
+        "h": 3
+      },
+      "value": 49,
+      "weight": 31,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P030",
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "value": 22,
+      "weight": 30,
+      "is_fragile": true,
+      "eta": 1
+    },
+    {
+      "id": "P031",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 1
+      },
+      "value": 43,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P032",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "value": 63,
+      "weight": 39,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P033",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 1
+      },
+      "value": 17,
+      "weight": 31,
+      "is_fragile": true,
+      "eta": 5
+    },
+    {
+      "id": "P034",
+      "dimensions": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "value": 82,
+      "weight": 29,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P035",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 3
+      },
+      "value": 90,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P036",
+      "dimensions": {
+        "w": 1,
+        "l": 4,
+        "h": 2
+      },
+      "value": 88,
+      "weight": 29,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P037",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "value": 90,
+      "weight": 3,
+      "is_fragile": true,
+      "eta": 2
+    },
+    {
+      "id": "P038",
+      "dimensions": {
+        "w": 4,
+        "l": 1,
+        "h": 2
+      },
+      "value": 73,
+      "weight": 24,
+      "is_fragile": true,
+      "eta": 6
+    },
+    {
+      "id": "P039",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "value": 22,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P040",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 3
+      },
+      "value": 43,
+      "weight": 22,
+      "is_fragile": true,
+      "eta": 3
+    },
+    {
+      "id": "P041",
+      "dimensions": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "value": 69,
+      "weight": 22,
+      "is_fragile": true,
+      "eta": 5
+    },
+    {
+      "id": "P042",
+      "dimensions": {
+        "w": 1,
+        "l": 3,
+        "h": 3
+      },
+      "value": 61,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P043",
+      "dimensions": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "value": 117,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P044",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 3
+      },
+      "value": 77,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P045",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "value": 37,
+      "weight": 31,
+      "is_fragile": true,
+      "eta": 2
+    },
+    {
+      "id": "P046",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 2
+      },
+      "value": 85,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P047",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "value": 37,
+      "weight": 28,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P048",
+      "dimensions": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "value": 49,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P049",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 1
+      },
+      "value": 44,
+      "weight": 20,
+      "is_fragile": true,
+      "eta": 6
+    },
+    {
+      "id": "P050",
+      "dimensions": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "value": 76,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P051",
+      "dimensions": {
+        "w": 4,
+        "l": 1,
+        "h": 2
+      },
+      "value": 78,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P052",
+      "dimensions": {
+        "w": 1,
+        "l": 1,
+        "h": 3
+      },
+      "value": 27,
+      "weight": 21,
+      "is_fragile": true,
+      "eta": 7
+    },
+    {
+      "id": "P053",
+      "dimensions": {
+        "w": 1,
+        "l": 3,
+        "h": 2
+      },
+      "value": 117,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P054",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 3
+      },
+      "value": 85,
+      "weight": 30,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P055",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "value": 91,
+      "weight": 28,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P056",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 3
+      },
+      "value": 14,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P057",
+      "dimensions": {
+        "w": 4,
+        "l": 1,
+        "h": 2
+      },
+      "value": 68,
+      "weight": 33,
+      "is_fragile": true,
+      "eta": 1
+    },
+    {
+      "id": "P058",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 1
+      },
+      "value": 111,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P059",
+      "dimensions": {
+        "w": 4,
+        "l": 5,
+        "h": 1
+      },
+      "value": 48,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P060",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 2
+      },
+      "value": 95,
+      "weight": 27,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P061",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 1
+      },
+      "value": 75,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P062",
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 1
+      },
+      "value": 66,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P063",
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 1
+      },
+      "value": 38,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P064",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 3
+      },
+      "value": 84,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P065",
+      "dimensions": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "value": 56,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P066",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "value": 57,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P067",
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "value": 64,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P068",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 1
+      },
+      "value": 96,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P069",
+      "dimensions": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "value": 90,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P070",
+      "dimensions": {
+        "w": 3,
+        "l": 5,
+        "h": 1
+      },
+      "value": 116,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P071",
+      "dimensions": {
+        "w": 1,
+        "l": 4,
+        "h": 2
+      },
+      "value": 103,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P072",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 3
+      },
+      "value": 54,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P073",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "value": 32,
+      "weight": 18,
+      "is_fragile": true,
+      "eta": 6
+    },
+    {
+      "id": "P074",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 1
+      },
+      "value": 97,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P075",
+      "dimensions": {
+        "w": 4,
+        "l": 1,
+        "h": 3
+      },
+      "value": 50,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P076",
+      "dimensions": {
+        "w": 3,
+        "l": 1,
+        "h": 2
+      },
+      "value": 64,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P077",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "value": 28,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P078",
+      "dimensions": {
+        "w": 2,
+        "l": 3,
+        "h": 1
+      },
+      "value": 108,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P079",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 1
+      },
+      "value": 42,
+      "weight": 35,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P080",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 2
+      },
+      "value": 81,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P081",
+      "dimensions": {
+        "w": 4,
+        "l": 3,
+        "h": 1
+      },
+      "value": 91,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P082",
+      "dimensions": {
+        "w": 1,
+        "l": 3,
+        "h": 3
+      },
+      "value": 70,
+      "weight": 27,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P083",
+      "dimensions": {
+        "w": 1,
+        "l": 5,
+        "h": 3
+      },
+      "value": 32,
+      "weight": 39,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P084",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "value": 116,
+      "weight": 39,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P085",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 1
+      },
+      "value": 106,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P086",
+      "dimensions": {
+        "w": 4,
+        "l": 5,
+        "h": 3
+      },
+      "value": 103,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P087",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 1
+      },
+      "value": 81,
+      "weight": 36,
+      "is_fragile": false,
+      "eta": 7
+    },
+    {
+      "id": "P088",
+      "dimensions": {
+        "w": 4,
+        "l": 5,
+        "h": 3
+      },
+      "value": 111,
+      "weight": 26,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P089",
+      "dimensions": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "value": 77,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 6
+    },
+    {
+      "id": "P090",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 1
+      },
+      "value": 31,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P091",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 1
+      },
+      "value": 80,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P092",
+      "dimensions": {
+        "w": 1,
+        "l": 4,
+        "h": 2
+      },
+      "value": 12,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "P093",
+      "dimensions": {
+        "w": 2,
+        "l": 1,
+        "h": 3
+      },
+      "value": 89,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P094",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "value": 72,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "P095",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 2
+      },
+      "value": 112,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P096",
+      "dimensions": {
+        "w": 1,
+        "l": 4,
+        "h": 1
+      },
+      "value": 71,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "P097",
+      "dimensions": {
+        "w": 1,
+        "l": 3,
+        "h": 2
+      },
+      "value": 76,
+      "weight": 8,
+      "is_fragile": true,
+      "eta": 5
+    },
+    {
+      "id": "P098",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "value": 19,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "P099",
+      "dimensions": {
+        "w": 3,
+        "l": 4,
+        "h": 1
+      },
+      "value": 24,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "P100",
+      "dimensions": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "value": 108,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 3
+    }
+  ]
+}
