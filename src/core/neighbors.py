@@ -150,13 +150,12 @@ def random_move(state: State, rng: random.Random, max_tries: int = 100) -> Move:
             a = rng.choice(ids)
             candidates = candidate_positions(state, a)
 
-            # Paket bisa dikeluarkan dari truck
-            if state.placements[a].inside:
-                candidates.append(None)
-
-            if not candidates:
+            if state.placements[a].inside and (not candidates or rng.random() < 0.5):
+                move = Move(kind="move", a=a, position=None)
+            elif candidates:
+                move = Move(kind="move", a=a, position=rng.choice(candidates))
+            else:
                 continue
-            move = Move(kind="move", a=a, position=rng.choice(candidates))
 
         # rotate (hanya berpengaruh untuk paket di dalam truk)
         else:

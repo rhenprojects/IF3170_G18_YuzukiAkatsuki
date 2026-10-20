@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any
 
-from core.objective import objective
+from core.objective import get_objective_mode, objective, total_value
 from core.state import State
 
 
@@ -21,10 +21,13 @@ class SearchResult:
     iterations: int
     history: list[float] = field(default_factory=list)   # objective per iterasi
     extra: dict[str, Any] = field(default_factory=dict)  # data khusus per algoritma
+    objective_mode: str = "value"                    
 
     def to_dict(self) -> dict:
         return {
             "algorithm": self.algorithm,
+            "objective_mode": self.objective_mode,
+            "final_total_value": total_value(self.final_state),
             "initial_objective": self.initial_objective,
             "final_objective": self.final_objective,
             "duration_s": self.duration_s,
@@ -57,6 +60,7 @@ class LocalSearch(ABC):
             iterations=iterations,
             history=history,
             extra=extra,
+            objective_mode=get_objective_mode(),
         )
 
     @abstractmethod
